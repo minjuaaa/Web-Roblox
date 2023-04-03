@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Helloworld</h1>
+<!--[[${quiznumtext}]]-->
+<table>
+    <thead>
+    <tr>
+        <th>quiznum조회결과</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="quiz : ${quiznumtext}">
+        <td th:text="${quiz.}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+</body>
+</html>

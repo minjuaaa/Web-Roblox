@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>대회에 출제된 문제목록을 보여주는 화면...</h1>
+
+<h1>
+    테스트 페이지!
+</h1>
+
+[[${quiz}]]
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>퀴즈ID</th>
+        <th>제목</th>
+        <th>답</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="quiz : ${quizs}">
+<!--        <td><a href="board.html" th:href="@{/boards/{boardId}(boardId=${board.boardId})}" th:text="${board.boardId}">게시글 아이디</a></td>-->
+<!--        <td><a href="board.html" th:href="@{|/boards/${board.boardId}|}" th:text="${board.name}">글쓴이</a></td>-->
+        <td th:text="${quiz.quizId}">제목</td>
+        <td th:text="${quiz.title}">1</td>
+        <td th:text="${quiz.correct}">1</td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>

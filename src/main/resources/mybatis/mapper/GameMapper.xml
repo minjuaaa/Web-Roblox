@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.quiz01.dao.GameMapper">
+
+    <insert id="uploadgame" parameterType="com.example.quiz01.dto.Game">
+        INSERT INTO game (gameTitle, gameCode)
+        VALUES (#{gameTitle}, #{gameCode});
+    </insert>
+
+</mapper>

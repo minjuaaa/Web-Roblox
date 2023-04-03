@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.quiz01.dao.AnswerMapper">
+
+    <insert id="uploadanswer" parameterType="com.example.quiz01.dto.Answer">
+        INSERT INTO answer (gameCode, num, answers)
+        VALUES (#{gameCode}, #{num}, #{answers});
+    </insert>
+
+
+
+
+
+
+    <select id="getAnswerList" resultType="com.example.quiz01.dto.Answer">
+        SELECT * FROM answer;
+    </select>
+
+</mapper>

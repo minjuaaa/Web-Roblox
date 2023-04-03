@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>대회결과</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+    <style type="text/css">
+
+
+        body{font-family:'굴림';background:#FAF0E6}
+        table{width:100%;table-layout:fixed;border-collapse:collapse}
+        td {padding : 0.5em;}
+        hr {border: 0;height: 5px; background: black; margin: 10px}
+        nav {font-family: 'Iropke Batang', serif;text-align:center}
+
+        .linetable{width:95%;display: inline-block;margin-top:20px;margin-bottom:30px}
+        .card{background-color: #fef5e1;font-weight:bold}
+        .game{font-size: 40px; font-weight:bold}
+
+        @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+        .maintable{width:100%;height:70%}
+        .name{width: auto; height: auto;display: inline-block;}
+        .nametd{border: 1px solid #444444; }
+        .centerline{border: 1px solid #444444; border-top: none;border-bottom: none;border-left: none;}
+
+
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    margin:0 auto;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn-yellow {
+    background-color: #fce205;
+    margin:0 auto;
+    color: #6e6e6e;
+}
+
+
+
+.w-btn-yellow-outline {
+    border: 3px solid #fce205;
+    color: #6e6e6e;
+}
+
+
+
+.w-btn-yellow-outline:hover {
+    background-color: #fce205;
+    color: #6e6e6e;
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.w-btn-outline:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.w-btn:active {
+    transform: scale(1.5);
+}
+
+.w-btn-outline:active {
+    transform: scale(1.5);
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar">
+        <div class="navbar__logo">
+            <p class ="game">10월 4주차 단원평가 퀴즈</p>
+<!--            <h4>2022년 10월 23일</h4>-->
+        </div>
+
+<!--    <table class="name">-->
+<!--        <th>-->
+<!--            <td class="nametd">이름</td><td class="nametd"><input type="text" style="width: 60px;"/></td>-->
+<!--        </th>-->
+<!--    </table>-->
+
+<!--    <table class="name">-->
+<!--        <th>-->
+<!--        <td class="nametd">수험번호</td><td class="nametd"><input type="text" style="width: 60px;"/></td>-->
+<!--        </th>-->
+<!--    </table>-->
+</nav>
+<h1>
+    [[${test}]]
+</h1>
+<hr>
+
+<table class="maintable">
+    <tr>
+        <td class="centerline">
+
+        <div class="linetable">
+            <table th:each="quiz : ${quizs}">
+                <colgroup><col><col></colgroup>
+                <tbody>
+                <tr>
+                    <td colspan="2" th:text="${quiz.title}"><div class="card">문제</div></td>
+                </tr>
+                <tr>
+                    <td th:text="${quiz.image}">시각자료</td>
+                    <td rowspan="5">
+                        <center><button class="w-btn w-btn-yellow" type="button">
+                            정답확인<br> Click !
+                        </button> <!-- 1번임 --->
+                        </center>
+                    </td>
+                </tr>
+                <tr><td th:text="${quiz.ex1}">1</td></tr>
+                <tr><td th:text="${quiz.ex2}">2</td></tr>
+                <tr><td th:text="${quiz.ex3}">3</td></tr>
+                <tr><td th:text="${quiz.ex4}">4</td></tr>
+                <br><br><br></br>
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+            <div class="linetable">
+                <table>
+                    <colgroup><col><col></colgroup>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td colspan="2"><div class="card">남진정책을 추진하여 평양으로 천도한 왕은 장수왕이다.
+
+                        </div>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>시각자료</td>
+                        <td rowspan="5">
+                            <center><button class="w-btn w-btn-yellow" type="button">
+                                정답확인<br> Click !
+                            </button> <!-- 1번임 --->
+                            </center>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>O
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>X
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+            <div class="linetable">
+                <table>
+                    <colgroup><col><col></colgroup>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td colspan="2"><div class="card">조선이 자주국임을 규정하고 부산 외 2개 항구 개항과 해안 측량권을 허용한 최초의 근대적 조약은 무엇인가?
+                        </div>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>시각자료</td>
+                        <td rowspan="5">
+                            <center><button class="w-btn w-btn-yellow" type="button">
+                                정답확인<br> Click !
+                            </button> <!-- 1번임 --->
+                            </center>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td> 답: <input type="text" style="width: 100px;"/>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+        </td>
+
+        <td>
+            <div class="linetable">
+                <table>
+                    <colgroup><col><col></colgroup>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td colspan="2"><div class="card">조선이 자주국임을 규정하고 부산 외 2개 항구 개항과 해안 측량권을 허용한 최초의 근대적 조약은 무엇인가?
+                        </div>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td><img src="../static/1234.PNG" width="100%"/></td>
+                        <td rowspan="5">
+                            <center><button class="w-btn w-btn-yellow" type="button">
+                                정답확인<br> Click !
+                            </button> <!-- 1번임 --->
+                            </center>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td> 답: <input type="text" style="width: 100px;"/>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+            <div class="linetable">
+                <table>
+                    <colgroup><col><col></colgroup>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td colspan="2"><div class="card">사용 빈도가 가장 적은 페이지를 교체하는 알고리즘 기법은 무엇인가?
+
+                        </div>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td rowspan="5">
+                            <center><button class="w-btn w-btn-yellow" type="button">
+                                정답확인<br> Click !
+                            </button> <!-- 1번임 --->
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>①LRU
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>②FIFO
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>③LFU
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>④SCR
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+            <div class="linetable">
+                <table>
+                    <colgroup><col><col></colgroup>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td colspan="2"><div class="card">온실 기체에 의해 벌어지는 지구 온난화를 줄이기 위한 국제 협약을 무엇이라 하는가?
+                        </div>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>시각자료</td>
+                        <td rowspan="5">
+                            <center><button class="w-btn w-btn-yellow" type="button">
+                                정답확인<br> Click !
+                            </button> <!-- 1번임 --->
+                            </center>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>①기후변화협약
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>②온실가스협약
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>③지구온난화협약
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>④기후변화협상
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+        </td>
+    </tr>
+
+</table>
+
+
+
+
+
+
+</body>
+</html>

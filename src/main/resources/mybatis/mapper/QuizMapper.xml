@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.quiz01.dao.QuizMapper">
+<!--    <select id="findAll" resultType="com.example.quiz01.dto.Quiz">-->
+<!--        SELECT * FROM quiz;-->
+<!--    </select>-->
+    <select id="findByCode" resultType="com.example.quiz01.dto.Quiz">
+        SELECT * FROM quiz
+        <where>
+            gameCode = #{gameCode};
+        </where>
+    </select>
+
+    <select id="checkAnswer" resultType="com.example.quiz01.dto.Quiz">
+        SELECT correct FROM quiz
+        <where>
+            gameCode = #{gameCode} AND num = #{num}
+        </where>
+    </select>
+
+    <select id="quizNum" parameterType="map" resultType="com.example.quiz01.dto.Quiz">
+        SELECT title FROM quiz
+        <where>
+            gameCode = #{gameCode}
+            AND
+            num = #{num}
+        </where>
+    </select>
+
+
+
+
+
+</mapper>

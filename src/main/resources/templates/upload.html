@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+<h1>csv 파일 업로드하기</h1>
+
+<form id="fileUploadForm" method="post" action="/upload/csv" enctype="multipart/form-data">
+
+    대회명: <input type="text" name="gameTitle"><br>
+    대회코드: <input type="text" name="gameCode"><br>
+    파일 : <input type="file" id="uploadFile" name="uploadFile"><br><br>
+    <input type="submit" value="업로드">
+</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+select q.title, g.gamename, q.correct, q.quizimage, i.gameinfoid
+from quiz q, game g, gameinfo i
+where g.gameId = 1 and
+q.quizId = i.quizId and g.gameId = i.gameId
+
+
+insert into answer (`gameinfoId`, `robloxId`, `answerImage`, `result`) values
+	(1, 'apple12', '1_apple12.jpg', 1);
+
+이미지드로잉서버.. DB없음
+좌표정보 주면 생성된 이미지 리턴
+
+
