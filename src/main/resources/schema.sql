@@ -2,8 +2,14 @@ DROP TABLE IF EXISTS answer;
 DROP TABLE IF EXISTS gameinfo;
 DROP TABLE IF EXISTS game;
 DROP TABLE IF EXISTS quiz;
+DROP TABLE IF EXISTS csvtest;
 
 
+CREATE TABLE csvtest(
+	column1 varchar(255),
+	column2 varchar(255),
+	primary key (column1)
+);
 
 
 CREATE TABLE game(
@@ -13,18 +19,17 @@ CREATE TABLE game(
 );
 
 CREATE TABLE quiz(
-	quizId int NOT NULL AUTO_INCREMENT,
+	quizId int AUTO_INCREMENT,
 	gameCode varchar(255),
 	num varchar(255),
-	title varchar(255) NOT NULL,
+	title varchar(255),
 	ex1 varchar(255),
 	ex2 varchar(255),
 	ex3 varchar(255),
 	ex4 varchar(255),
 	imageCode varchar(255),
 	correct varchar(255),
-	primary key (quizId),
-	foreign key (gameCode) references game(gameCode)
+	primary key (quizId)
 );
 
 CREATE TABLE answer(

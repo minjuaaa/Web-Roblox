@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.quiz01.dao.CsvDataMapper">
+
+    <!-- insertData 메서드에 대한 SQL 매핑 -->
+    <insert id="insertData">
+        INSERT INTO quiz (gameCode, num, title, ex1, ex2, ex3, ex4, imageCode, correct)
+        VALUES (#{gameCodecsv}, #{num}, #{title}, #{ex1}, #{ex2}, #{ex3}, #{ex4}, #{imageCode}, #{correct} )
+    </insert>
+
+    <!-- 필요한 경우에 따라 추가적인 SQL 쿼리 정의 가능 -->
+
+</mapper>
